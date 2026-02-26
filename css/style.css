@@ -1,4 +1,15 @@
 /* ===== GLOBAL STYLES ===== */
+:root {
+  --primary: #667eea;
+  --secondary: #764ba2;
+  --accent: #0b5cff;
+  --accent-dark: #0047cc;
+  --light-bg: #f8fbff;
+  --text-dark: #333;
+  --text-light: #fff;
+  --radius: 10px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,12 +17,23 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: url('/images/portfolio-bg.svg') no-repeat fixed center center;
   background-size: cover;
-  background-color: #f5f7fa;
-  color: #333;
+  background-color: var(--light-bg);
+  color: var(--text-dark);
   line-height: 1.6;
+}
+
+/* smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .container {
@@ -100,25 +122,288 @@ body {
 
 /* ===== HERO SECTION ===== */
 .hero {
-  background: url('/images/funds-hero-bg.svg') center/cover no-repeat, linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  background: url('/images/funds-hero-bg.svg') center/cover no-repeat,
+              linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
   background-blend-mode: overlay;
-  color: white;
-  padding: 100px 20px;
+  color: var(--text-light);
+  padding: 120px 20px;
+  text-align: center;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 900;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* features grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.section-features {
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+
+.section-header {
   text-align: center;
   margin-bottom: 50px;
 }
 
-.hero-content h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--text-dark);
+}
+
+.section-header p {
+  font-size: 1.1em;
+  color: #666;
+  max-width: 600px;
+  margin: 16px auto 0;
+}
+
+/* steps section */
+.section-steps {
+  margin-bottom: 80px;
+  background: var(--light-bg);
+  padding: 60px 40px;
+  border-radius: 16px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2rem;
+  color: var(--text-dark);
+}
+
+/* popular funds */
+.section-popular {
+  margin-bottom: 80px;
+}
+
+.section-popular .section-title {
+  margin-bottom: 40px;
+}
+
+.centered-cta {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.fund-name {
+  margin-top: 0;
+}
+
+.fund-stats {
+  font-size: 0.95em;
+  opacity: 0.9;
+  margin: 8px 0;
+}
+
+.fund-return {
+  font-size: 1.5em;
   font-weight: bold;
 }
 
-.hero-content p {
-  font-size: 20px;
-  margin-bottom: 30px;
-  opacity: 0.95;
+.fund-risk {
+  opacity: 0.8;
+  margin: 0;
 }
+
+/* benefits grid */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* cta section */
+.section-cta {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  padding: 80px 40px;
+  border-radius: 16px;
+  text-align: center;
+  color: var(--text-light);
+  margin-bottom: 40px;
+}
+
+.section-cta h2 {
+  color: var(--text-light);
+  margin-bottom: 16px;
+  font-size: 2.25rem;
+}
+
+.section-cta p {
+  font-size: 1.1em;
+  opacity: 0.95;
+  margin-bottom: 32px;
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
+
+
+.feature-card {
+  background: var(--text-light);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.feature-card .icon {
+  font-size: 36px;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+/* steps */
+.steps-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.step {
+  background: var(--text-light);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 200px;
+}
+
+.step-number {
+  background: var(--primary);
+  color: var(--text-light);
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  margin: 0 auto 12px;
+  font-weight: 700;
+}
+
+/* slider */
+.slider {
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.slider-container {
+  display: flex;
+  gap: 20px;
+}
+
+.slider-item {
+  background: var(--text-light);
+  padding: 24px;
+  border-radius: var(--radius);
+  min-width: 240px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* card overrides */
+.card {
+  background: var(--text-light);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* CTAs */
+.btn {
+  padding: 12px 28px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: var(--text-light);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+  background: var(--text-light);
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.btn-secondary:hover {
+  background: var(--primary);
+  color: var(--text-light);
+}
+
+.btn-block {
+  width: 100%;
+  display: block;
+}
+
+.btn-small {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.btn-info {
+  background: #3498db;
+  color: var(--text-light);
+}
+
+.btn-danger {
+  background: #e74c3c;
+  color: var(--text-light);
+}
+
+.btn-danger:hover {
+  background: #c0392b;
+}
+
+/* ...existing responsive rules follow */
 
 .hero-buttons {
   display: flex;

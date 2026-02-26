@@ -1,8 +1,10 @@
 import Nav from '../components/Nav'
 import Link from 'next/link'
+import Head from 'next/head'
 import { useState } from 'react'
 
 export default function Home(){
+  // background image variables and data remain unchanged
   const [email, setEmail] = useState('')
 
   const features = [
@@ -32,15 +34,21 @@ export default function Home(){
   return (
     <>
       <Nav />
+      <Head>
+        <title>MutualFund Pro</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+      </Head>
       
       {/* Hero Section */}
       <div className="hero">
-        <div className="container">
+        <div className="container hero-content">
           <h1>📊 Master Your Mutual Fund Investments</h1>
           <p>A comprehensive platform to understand, compare, and manage mutual funds with expert insights and data-driven analytics.</p>
-          <div style={{marginTop: 24}}>
-            <Link href="/funds"><a className="btn">Explore Funds</a></Link>
-            <Link href="/register"><a className="btn" style={{background: 'rgba(255,255,255,0.2)', borderBottom: '2px solid white', marginLeft: 12}}>Sign Up</a></Link>
+          <div className="hero-buttons">
+            <Link href="/funds"><a className="btn btn-primary">Explore Funds</a></Link>
+            <Link href="/register"><a className="btn btn-secondary" style={{marginLeft: 12}}>Sign&nbsp;Up</a></Link>
           </div>
         </div>
       </div>
@@ -49,10 +57,10 @@ export default function Home(){
         <div className="container">
           
           {/* Why Choose Us */}
-          <section style={{marginTop: 60, marginBottom: 80}}>
-            <div style={{textAlign: 'center', marginBottom: 50}}>
+          <section className="section-features">
+            <div className="section-header">
               <h2>Everything You Need to Invest Wisely</h2>
-              <p style={{fontSize: '1.1em', color: '#666', maxWidth: '600px', margin: '16px auto 0'}}>Comprehensive tools and insights for informed investment decisions</p>
+              <p>Comprehensive tools and insights for informed investment decisions</p>
             </div>
             <div className="features-grid">
               {features.map((f, i) => (
@@ -66,8 +74,8 @@ export default function Home(){
           </section>
 
           {/* How It Works */}
-          <section style={{marginBottom: 80, background: 'linear-gradient(135deg, #f8fbff 0%, #f0f5ff 100%)', padding: '60px 40px', borderRadius: '16px'}}>
-            <h2 style={{textAlign: 'center', marginBottom: 50}}>How MutualFund Pro Works</h2>
+          <section className="section-steps">
+            <h2 className="section-title">How MutualFund Pro Works</h2>
             <div className="steps-container">
               {steps.map((s, i) => (
                 <div key={i} className="step">
@@ -80,51 +88,51 @@ export default function Home(){
           </section>
 
           {/* Popular Funds Section */}
-          <section style={{marginBottom: 80}}>
-            <h2 style={{textAlign: 'center', marginBottom: 40}}>Popular Funds You Can Invest In</h2>
+          <section className="section-popular">
+            <h2 className="section-title">Popular Funds You Can Invest In</h2>
             <div className="slider">
               <div className="slider-container">
                 {popularFunds.map((f, i) => (
                   <div key={i} className="slider-item">
-                    <h3 style={{marginTop: 0}}>{f.name}</h3>
-                    <p style={{fontSize: '0.95em', opacity: 0.9, margin: '8px 0'}}>
-                      <strong>1 Year Return:</strong> <br /> <span style={{fontSize: '1.5em', fontWeight: 'bold'}}>{f.returns}</span>
+                    <h3 className="fund-name">{f.name}</h3>
+                    <p className="fund-stats">
+                      <strong>1 Year Return:</strong> <br /> <span className="fund-return">{f.returns}</span>
                     </p>
-                    <p style={{opacity: 0.8, margin: 0}}>Risk Level: {f.risk}</p>
+                    <p className="fund-risk">Risk Level: {f.risk}</p>
                   </div>
                 ))}
               </div>
             </div>
-            <div style={{textAlign: 'center', marginTop: 24}}>
-              <Link href="/funds"><a className="btn">View All Funds →</a></Link>
+            <div className="centered-cta">
+              <Link href="/funds"><a className="btn btn-primary">View All Funds →</a></Link>
             </div>
           </section>
 
           {/* Key Features */}
-          <section style={{marginBottom: 80}}>
-            <h2 style={{textAlign: 'center', marginBottom: 40}}>Why Choose MutualFund Pro?</h2>
-            <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24}}>
-              <div className="card" style={{borderLeft: '4px solid #0b5cff'}}>
+          <section className="section-benefits">
+            <h2 className="section-title">Why Choose MutualFund Pro?</h2>
+            <div className="benefits-grid">
+              <div className="card benefit" style={{borderLeft: '4px solid #0b5cff'}}>
                 <h4>✨ Advanced Analytics</h4>
                 <p>Real-time performance tracking, historical analysis, and predictive insights for smarter investment decisions.</p>
               </div>
-              <div className="card" style={{borderLeft: '4px solid #667eea'}}>
+              <div className="card benefit" style={{borderLeft: '4px solid var(--primary)'}}>
                 <h4>🔐 Secure & Reliable</h4>
                 <p>Enterprise-grade security, encrypted data, and reliable infrastructure you can trust with your investments.</p>
               </div>
-              <div className="card" style={{borderLeft: '4px solid #764ba2'}}>
+              <div className="card benefit" style={{borderLeft: '4px solid var(--secondary)'}}>
                 <h4>📱 Multi-Device Access</h4>
                 <p>Access your portfolios from anywhere, anytime with our responsive, mobile-optimized platform.</p>
               </div>
-              <div className="card" style={{borderLeft: '4px solid #f39c12'}}>
+              <div className="card benefit" style={{borderLeft: '4px solid #f39c12'}}>
                 <h4>👨‍💼 Expert Advisory</h4>
                 <p>Connect with experienced financial advisors who can guide you through your investment journey.</p>
               </div>
-              <div className="card" style={{borderLeft: '4px solid #e74c3c'}}>
+              <div className="card benefit" style={{borderLeft: '4px solid #e74c3c'}}>
                 <h4>📊 Data-Driven Reports</h4>
                 <p>Detailed performance reports, tax insights, and personalized recommendations based on your profile.</p>
               </div>
-              <div className="card" style={{borderLeft: '4px solid #27ae60'}}>
+              <div className="card benefit" style={{borderLeft: '4px solid #27ae60'}}>
                 <h4>🎓 Educational Resources</h4>
                 <p>Learn from our comprehensive guides, webinars, and expert articles about mutual fund investing.</p>
               </div>
@@ -132,13 +140,11 @@ export default function Home(){
           </section>
 
           {/* CTA Section */}
-          <section style={{background: 'linear-gradient(135deg, #0b5cff 0%, #0047cc 100%)', padding: '80px 40px', borderRadius: '16px', textAlign: 'center', color: 'white', marginBottom: 40}}>
-            <h2 style={{color: 'white', marginBottom: 16}}>Ready to Start Investing Smarter?</h2>
-            <p style={{fontSize: '1.1em', opacity: 0.95, marginBottom: 32, maxWidth: '600px', margin: '0 auto 32px'}}>
-              Join thousands of investors who are making informed investment decisions with MutualFund Pro
-            </p>
+          <section className="section-cta">
+            <h2>Ready to Start Investing Smarter?</h2>
+            <p>Join thousands of investors who are making informed investment decisions with MutualFund Pro</p>
             <div>
-              <Link href="/register"><a className="btn" style={{background: 'white', color: '#0b5cff', fontSize: '1.1em', padding: '14px 40px'}}>Get Started Today →</a></Link>
+              <Link href="/register"><a className="btn btn-secondary" style={{fontSize: '1.1em', padding: '14px 40px'}}>Get Started Today →</a></Link>
             </div>
           </section>
 

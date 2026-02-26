@@ -9,7 +9,7 @@ export default function Nav(){
   },[])
   function logout(){ clearSession(); window.location.href='/' }
   return (
-    <nav>
+    <header className="main-header">
       <div className="container">
         <Link href="/"><a className="brand">📊 MutualFunds</a></Link>
         <div className="nav-links">
@@ -33,6 +33,6 @@ export default function Nav(){
           )}
         </div>
       </div>
-    </nav>
+    </header>
   )
 }
