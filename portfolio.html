@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio - Mutual Funds Platform</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="main-header">
+  <div class="container">
+    <div class="logo">💰 MutualFunds</div>
+    <nav class="main-nav">
+      <span class="user-name" id="userName">Investor</span>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="index.html" class="btn-logout" onclick="logout()">Logout</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container portfolio-container">
+  <h2>My Investment Portfolio</h2>
+  <p class="subtitle">Track your investments and portfolio performance</p>
+
+  <section class="portfolio-header">
+    <div class="portfolio-stats">
+      <div class="stat-card">
+        <div class="stat-label">Total Invested</div>
+        <div class="stat-value">₹50,000</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Current Value</div>
+        <div class="stat-value">₹56,500</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Total Returns</div>
+        <div class="stat-value positive">+₹6,500</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Return %</div>
+        <div class="stat-value positive">+13%</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="holdings-section">
+    <h3>Your Holdings</h3>
+    <div class="holdings-container">
+      <div class="holding-card">
+        <div class="holding-header">
+          <h4>Equity Growth Fund</h4>
+          <div class="holding-badge equity">Equity</div>
+        </div>
+        <div class="holding-details">
+          <div class="detail-row">
+            <span class="label">Invested Amount:</span>
+            <span class="value">₹25,000</span>
+          </div>
+          <div class="detail-row">
+            <span class="label">Current Value:</span>
+            <span class="value">₹28,750</span>
+          </div>
+          <div class="detail-row">
+            <span class="label">Gain/Loss:</span>
+            <span class="value positive">+₹3,750 (15%)</span>
+          </div>
+          <div class="detail-row">
+            <span class="label">Units Held:</span>
+            <span class="value">100</span>
+          </div>
+          <div class="detail-row">
+            <span class="label">Risk Level:</span>
+            <span class="value"><span class="badge high-risk">High</span></span>
+          </div>
+        </div>
+        <button class="btn btn-small btn-danger" onclick="alert('Fund redemption feature coming soon!')">Redeem</button>
+      </div>
+
+      <div class="holding-card">
+        <div class="holding-header">
+          <h4>Balanced Advantage Fund</h4>
+          <div class="holding-badge hybrid">Hybrid</div>
+        </div>
+        <div class="holding-details">
+          <div class="detail-row">
+            <span class="label">Invested Amount:</span>
+            <span class="value">₹15,000</span>
+          </div>
+          <div class="detail-row">
+            <span class="label">Current Value:</span>
+            <span class="value">₹16,500</span>
+          </div>
+          <div class="detail-row">
+            <span class="label">Gain/Loss:</span>
+            <span class="value positive">+₹1,500 (10%)</span>
+          </div>
+          <div class="detail-row">
+            <span class="label">Units Held:</span>
+            <span class="value">150</span>
+          </div>
+          <div class="detail-row">
+            <span class="label">Risk Level:</span>
+            <span class="value"><span class="badge medium-risk">Medium</span></span>
+          </div>
+        </div>
+        <button class="btn btn-small btn-danger" onclick="alert('Fund redemption feature coming soon!')">Redeem</button>
+      </div>
+
+      <div class="holding-card">
+        <div class="holding-header">
+          <h4>Secure Income Fund</h4>
+          <div class="holding-badge debt">Debt</div>
+        </div>
+        <div class="holding-details">
+          <div class="detail-row">
+            <span class="label">Invested Amount:</span>
+            <span class="value">₹10,000</span>
+          </div>
+          <div class="detail-row">
+            <span class="label">Current Value:</span>
+            <span class="value">₹11,250</span>
+          </div>
+          <div class="detail-row">
+            <span class="label">Gain/Loss:</span>
+            <span class="value positive">+₹1,250 (12.5%)</span>
+          </div>
+          <div class="detail-row">
+            <span class="label">Units Held:</span>
+            <span class="value">225</span>
+          </div>
+          <div class="detail-row">
+            <span class="label">Risk Level:</span>
+            <span class="value"><span class="badge low-risk">Low</span></span>
+          </div>
+        </div>
+        <button class="btn btn-small btn-danger" onclick="alert('Fund redemption feature coming soon!')">Redeem</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio-actions">
+    <h3>Actions</h3>
+    <div class="action-buttons">
+      <a href="funds.html" class="btn btn-primary">Invest More</a>
+      <a href="compare.html" class="btn btn-secondary">Compare Funds</a>
+      <button class="btn btn-secondary" onclick="alert('Report download feature coming soon!')">Download Statement</button>
+    </div>
+  </section>
+</div>
+
+<footer class="main-footer">
+  <div class="container">
+    <p>&copy; 2026 Mutual Funds Platform. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

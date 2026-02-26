@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advisor Panel - Mutual Funds Platform</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="main-header">
+  <div class="container">
+    <div class="logo">💰 MutualFunds</div>
+    <nav class="main-nav">
+      <span class="user-name" id="userName">Financial Advisor</span>
+      <a href="index.html" class="btn-logout" onclick="logout()">Logout</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container advisor-container">
+  <h2>Financial Advisor Dashboard</h2>
+  <p class="subtitle">Provide recommendations and manage client requests</p>
+
+  <div class="advisor-nav">
+    <button class="advisor-tab active" onclick="showAdvisorTab('recommendations')">Send Recommendations</button>
+    <button class="advisor-tab" onclick="showAdvisorTab('clients')">Client Requests</button>
+    <button class="advisor-tab" onclick="showAdvisorTab('knowledge')">Educational Content</button>
+  </div>
+
+  <!-- Send Recommendations Tab -->
+  <div id="recommendations-tab" class="advisor-tab-content active">
+    <h3>Send Fund Recommendations</h3>
+    <form class="advisor-form">
+      <div class="form-group">
+        <label>Select Investor:</label>
+        <select required>
+          <option>-- Choose Client --</option>
+          <option>Rajesh Kumar (rajesh@example.com)</option>
+          <option>Priya Singh (priya@example.com)</option>
+          <option>Amit Patel (amit@example.com)</option>
+          <option>Neha Sharma (neha@example.com)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Investment Goal:</label>
+        <select required>
+          <option>-- Select Goal --</option>
+          <option>Wealth Creation</option>
+          <option>Retirement Planning</option>
+          <option>Education Planning</option>
+          <option>Short Term Gains</option>
+          <option>Capital Preservation</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Recommended Funds:</label>
+        <div class="fund-selector">
+          <label class="checkbox-label">
+            <input type="checkbox"> Equity Growth Fund
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox"> Balanced Advantage Fund
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox"> Secure Income Fund
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox"> Dividend Yield Fund
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox"> International Growth Fund
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Investment Reason & Rationale:</label>
+        <textarea placeholder="Explain why these funds are suitable for the client..." rows="6"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Risk Assessment:</label>
+        <select required>
+          <option>-- Select Risk Profile --</option>
+          <option>Conservative (Low Risk)</option>
+          <option>Moderate (Medium Risk)</option>
+          <option>Aggressive (High Risk)</option>
+        </select>
+      </div>
+
+      <button type="button" class="btn btn-primary" onclick="alert('Recommendation sent to client!')">Send Recommendation</button>
+    </form>
+
+    <h3 style="margin-top: 40px;">Recommendation History</h3>
+    <div class="history-list">
+      <div class="history-item">
+        <div class="history-header">
+          <span class="client-name">Rajesh Kumar</span>
+          <span class="date">2 hours ago</span>
+        </div>
+        <div class="history-content">
+          Recommended: Equity Growth Fund, Balanced Advantage Fund
+        </div>
+        <div class="history-status">
+          <span class="badge success">Sent</span>
+        </div>
+      </div>
+
+      <div class="history-item">
+        <div class="history-header">
+          <span class="client-name">Priya Singh</span>
+          <span class="date">1 day ago</span>
+        </div>
+        <div class="history-content">
+          Recommended: Secure Income Fund, Dividend Yield Fund
+        </div>
+        <div class="history-status">
+          <span class="badge success">Sent</span>
+        </div>
+      </div>
+
+      <div class="history-item">
+        <div class="history-header">
+          <span class="client-name">Amit Patel</span>
+          <span class="date">3 days ago</span>
+        </div>
+        <div class="history-content">
+          Recommended: International Growth Fund
+        </div>
+        <div class="history-status">
+          <span class="badge info">Viewed</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Client Requests Tab -->
+  <div id="clients-tab" class="advisor-tab-content">
+    <h3>Investor Requests & Inquiries</h3>
+    <div class="requests-list">
+      <div class="request-card">
+        <div class="request-header">
+          <h4>Rajesh Kumar</h4>
+          <span class="request-status pending">Pending</span>
+        </div>
+        <div class="request-details">
+          <p><strong>Question:</strong> Which fund is best for retirement planning in 10 years?</p>
+          <p><strong>Risk Profile:</strong> Moderate</p>
+          <p><strong>Budget:</strong> ₹50,000 monthly</p>
+        </div>
+        <textarea placeholder="Type your response..." rows="3"></textarea>
+        <button class="btn btn-primary btn-small" onclick="alert('Response sent!')">Send Response</button>
+      </div>
+
+      <div class="request-card">
+        <div class="request-header">
+          <h4>Priya Singh</h4>
+          <span class="request-status pending">Pending</span>
+        </div>
+        <div class="request-details">
+          <p><strong>Question:</strong> How to diversify my current portfolio?</p>
+          <p><strong>Risk Profile:</strong> Conservative</p>
+          <p><strong>Current Holdings:</strong> 3 debt funds</p>
+        </div>
+        <textarea placeholder="Type your response..." rows="3"></textarea>
+        <button class="btn btn-primary btn-small" onclick="alert('Response sent!')">Send Response</button>
+      </div>
+
+      <div class="request-card">
+        <div class="request-header">
+          <h4>Neha Sharma</h4>
+          <span class="request-status resolved">Resolved</span>
+        </div>
+        <div class="request-details">
+          <p><strong>Question:</strong> What's the tax implication of mutual fund investments?</p>
+          <p><strong>Response Status:</strong> Answered on Mar 20, 2026</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Educational Content Tab -->
+  <div id="knowledge-tab" class="advisor-tab-content">
+    <h3>Create Educational Content</h3>
+    <form class="advisor-form">
+      <div class="form-group">
+        <label>Content Title:</label>
+        <input type="text" placeholder="e.g., Understanding Mutual Fund Risk" required>
+      </div>
+
+      <div class="form-group">
+        <label>Topic Category:</label>
+        <select required>
+          <option>-- Select Category --</option>
+          <option>Basics of Mutual Funds</option>
+          <option>Risk Management</option>
+          <option>Investment Strategies</option>
+          <option>Tax Planning</option>
+          <option>Portfolio Management</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Content:</label>
+        <textarea placeholder="Write detailed educational content..." rows="8"></textarea>
+      </div>
+
+      <button type="button" class="btn btn-primary" onclick="alert('Content published!')">Publish Content</button>
+    </form>
+
+    <h3 style="margin-top: 40px;">Published Articles</h3>
+    <div class="articles-list">
+      <div class="article-item">
+        <h4>Understanding Mutual Fund Risk</h4>
+        <p class="article-meta">Published 5 days ago | Category: Risk Management</p>
+        <p>Explanation of different risk factors and how to assess fund volatility...</p>
+        <button class="btn btn-small" onclick="alert('Article updated!')">Edit</button>
+      </div>
+
+      <div class="article-item">
+        <h4>Beginners Guide to Investing</h4>
+        <p class="article-meta">Published 2 weeks ago | Category: Basics</p>
+        <p>Step-by-step guide for new investors to start their investment journey...</p>
+        <button class="btn btn-small" onclick="alert('Article updated!')">Edit</button>
+      </div>
+
+      <div class="article-item">
+        <h4>Portfolio Diversification Strategies</h4>
+        <p class="article-meta">Published 3 weeks ago | Category: Portfolio Management</p>
+        <p>Learn how to build a diversified portfolio that matches your goals...</p>
+        <button class="btn btn-small" onclick="alert('Article updated!')">Edit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="main-footer">
+  <div class="container">
+    <p>&copy; 2026 Mutual Funds Platform. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

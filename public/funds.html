@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mutual Funds</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Mutual Fund Investment Platform</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="funds.html">Explore Funds</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="login.html">Logout</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Available Mutual Funds</h2>
+  <p>Explore our curated selection of mutual funds</p>
+
+  <div class="funds-container">
+    <div class="fund">
+      <h3>Equity Growth Fund</h3>
+      <div class="fund-details">
+        <p><strong>Risk Level:</strong> <span class="risk-high">High</span></p>
+        <p><strong>Expected Returns:</strong> <span class="returns">15%</span></p>
+        <p><strong>Investment Type:</strong> Stocks</p>
+        <p><strong>Minimum Investment:</strong> ₹500</p>
+        <p><strong>Description:</strong> Focuses on high-growth companies with strong market potential.</p>
+      </div>
+      <button onclick="investFund('Equity Growth Fund')" class="btn">Invest Now</button>
+    </div>
+
+    <div class="fund">
+      <h3>Balanced Fund</h3>
+      <div class="fund-details">
+        <p><strong>Risk Level:</strong> <span class="risk-medium">Medium</span></p>
+        <p><strong>Expected Returns:</strong> <span class="returns">10%</span></p>
+        <p><strong>Investment Type:</strong> Stocks & Bonds</p>
+        <p><strong>Minimum Investment:</strong> ₹1000</p>
+        <p><strong>Description:</strong> Mix of equity and fixed income for moderate growth and stability.</p>
+      </div>
+      <button onclick="investFund('Balanced Fund')" class="btn">Invest Now</button>
+    </div>
+
+    <div class="fund">
+      <h3>Debt Fund</h3>
+      <div class="fund-details">
+        <p><strong>Risk Level:</strong> <span class="risk-low">Low</span></p>
+        <p><strong>Expected Returns:</strong> <span class="returns">6%</span></p>
+        <p><strong>Investment Type:</strong> Bonds & Fixed Income</p>
+        <p><strong>Minimum Investment:</strong> ₹5000</p>
+        <p><strong>Description:</strong> Safe investment option focusing on fixed income securities.</p>
+      </div>
+      <button onclick="investFund('Debt Fund')" class="btn">Invest Now</button>
+    </div>
+
+    <div class="fund">
+      <h3>Dividend Fund</h3>
+      <div class="fund-details">
+        <p><strong>Risk Level:</strong> <span class="risk-medium">Medium</span></p>
+        <p><strong>Expected Returns:</strong> <span class="returns">8%</span></p>
+        <p><strong>Investment Type:</strong> Dividend-paying Stocks</p>
+        <p><strong>Minimum Investment:</strong> ₹2000</p>
+        <p><strong>Description:</strong> Invests in companies with consistent dividend payouts.</p>
+      </div>
+      <button onclick="investFund('Dividend Fund')" class="btn">Invest Now</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2026 Mutual Fund Platform. All rights reserved.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

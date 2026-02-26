@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare Funds</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Mutual Fund Investment Platform</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="funds.html">Explore Funds</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="login.html">Logout</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Compare Mutual Funds</h2>
+  <p>Compare funds side-by-side to make informed investment decisions</p>
+
+  <div class="comparison-container">
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Fund Name</th>
+          <th>Risk Level</th>
+          <th>Expected Returns</th>
+          <th>Investment Type</th>
+          <th>Minimum Investment</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Equity Growth Fund</strong></td>
+          <td><span class="risk-high">High</span></td>
+          <td><span class="returns">15%</span></td>
+          <td>Stocks</td>
+          <td>₹500</td>
+          <td><button onclick="investFund('Equity Growth Fund')" class="btn-small">Invest</button></td>
+        </tr>
+        <tr>
+          <td><strong>Balanced Fund</strong></td>
+          <td><span class="risk-medium">Medium</span></td>
+          <td><span class="returns">10%</span></td>
+          <td>Stocks & Bonds</td>
+          <td>₹1000</td>
+          <td><button onclick="investFund('Balanced Fund')" class="btn-small">Invest</button></td>
+        </tr>
+        <tr>
+          <td><strong>Debt Fund</strong></td>
+          <td><span class="risk-low">Low</span></td>
+          <td><span class="returns">6%</span></td>
+          <td>Bonds</td>
+          <td>₹5000</td>
+          <td><button onclick="investFund('Debt Fund')" class="btn-small">Invest</button></td>
+        </tr>
+        <tr>
+          <td><strong>Dividend Fund</strong></td>
+          <td><span class="risk-medium">Medium</span></td>
+          <td><span class="returns">8%</span></td>
+          <td>Dividend Stocks</td>
+          <td>₹2000</td>
+          <td><button onclick="investFund('Dividend Fund')" class="btn-small">Invest</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2026 Mutual Fund Platform. All rights reserved.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

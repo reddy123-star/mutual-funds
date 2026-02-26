@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Analyst Panel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Mutual Fund Investment Platform</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="analyst.html">Analyst Panel</a>
+    <a href="analyst-reports.html">Reports</a>
+    <a href="login.html">Logout</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Data Analyst Dashboard</h2>
+  <p>Analyze trends, monitor performance, and generate reports</p>
+
+  <div class="analyst-grid">
+    <div class="analyst-card">
+      <h3>📊 Update Fund Performance</h3>
+      <form>
+        <select required>
+          <option value="">-- Select Fund --</option>
+          <option value="equity">Equity Growth Fund</option>
+          <option value="balanced">Balanced Fund</option>
+          <option value="debt">Debt Fund</option>
+          <option value="dividend">Dividend Fund</option>
+        </select>
+
+        <input type="number" step="0.01" placeholder="Current Returns (%)" required>
+        <input type="number" placeholder="AUM (₹ in Lakhs)" required>
+        <input type="date" required>
+
+        <button type="button" onclick="updatePerformance()" class="btn">Update Performance</button>
+      </form>
+    </div>
+
+    <div class="analyst-card">
+      <h3>📈 Investment Trends</h3>
+      <table class="trend-table">
+        <thead>
+          <tr>
+            <th>Fund</th>
+            <th>Total Investors</th>
+            <th>Monthly Growth</th>
+            <th>Trend</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Equity Growth Fund</td>
+            <td>145</td>
+            <td>+12%</td>
+            <td><span class="trend-up">📈 Up</span></td>
+          </tr>
+          <tr>
+            <td>Balanced Fund</td>
+            <td>98</td>
+            <td>+5%</td>
+            <td><span class="trend-up">📈 Up</span></td>
+          </tr>
+          <tr>
+            <td>Debt Fund</td>
+            <td>67</td>
+            <td>-2%</td>
+            <td><span class="trend-down">📉 Down</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="analyst-card">
+      <h3>📑 Generate Reports</h3>
+      <p>Create comprehensive investment analysis reports</p>
+      <button onclick="generateReport('quarterly')" class="btn">Quarterly Report</button>
+      <button onclick="generateReport('annual')" class="btn">Annual Report</button>
+      <button onclick="generateReport('custom')" class="btn">Custom Report</button>
+    </div>
+
+    <div class="analyst-card">
+      <h3>🎯 Key Metrics</h3>
+      <div class="metrics">
+        <p><strong>Total AUM:</strong> ₹5,45,000</p>
+        <p><strong>Total Investors:</strong> 310</p>
+        <p><strong>Avg Return:</strong> 10.5%</p>
+        <p><strong>Market Risk:</strong> Medium</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2026 Mutual Fund Platform. All rights reserved.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

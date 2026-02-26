@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare Funds - Mutual Funds Platform</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="main-header">
+  <div class="container">
+    <div class="logo">💰 MutualFunds</div>
+    <nav class="main-nav">
+      <span class="user-name" id="userName">User</span>
+      <a href="index.html" class="btn-logout" onclick="logout()">Logout</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <h2>Compare Mutual Funds</h2>
+  <p class="subtitle">Compare and analyze multiple funds to make informed decisions</p>
+
+  <div class="comparison-section">
+    <h3>Fund Comparison Table</h3>
+    <div class="table-wrapper">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Fund Name</th>
+            <th>Category</th>
+            <th>Risk Level</th>
+            <th>1Y Return</th>
+            <th>3Y Return</th>
+            <th>5Y Return</th>
+            <th>Expense Ratio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="fund-row">
+            <td><strong>Equity Growth Fund</strong></td>
+            <td>Equity</td>
+            <td><span class="badge high-risk">High</span></td>
+            <td>15%</td>
+            <td>12%</td>
+            <td>14%</td>
+            <td>1.2%</td>
+          </tr>
+          <tr class="fund-row">
+            <td><strong>Balanced Advantage Fund</strong></td>
+            <td>Hybrid</td>
+            <td><span class="badge medium-risk">Medium</span></td>
+            <td>10%</td>
+            <td>9%</td>
+            <td>10%</td>
+            <td>0.8%</td>
+          </tr>
+          <tr class="fund-row">
+            <td><strong>Secure Income Fund</strong></td>
+            <td>Debt</td>
+            <td><span class="badge low-risk">Low</span></td>
+            <td>5%</td>
+            <td>5.5%</td>
+            <td>5.2%</td>
+            <td>0.4%</td>
+          </tr>
+          <tr class="fund-row">
+            <td><strong>Dividend Yield Fund</strong></td>
+            <td>Equity</td>
+            <td><span class="badge medium-risk">Medium</span></td>
+            <td>12%</td>
+            <td>11%</td>
+            <td>12%</td>
+            <td>0.9%</td>
+          </tr>
+          <tr class="fund-row">
+            <td><strong>International Growth Fund</strong></td>
+            <td>Equity - International</td>
+            <td><span class="badge high-risk">High</span></td>
+            <td>18%</td>
+            <td>14%</td>
+            <td>16%</td>
+            <td>1.5%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <section class="risk-analysis">
+    <h3>Risk Analysis</h3>
+    <div class="risk-grid">
+      <div class="risk-card">
+        <div class="risk-title">Low Risk</div>
+        <p>Suitable for conservative investors</p>
+        <p class="risk-funds">Funds: Secure Income, Fixed Deposit</p>
+        <div class="risk-bar">
+          <div class="risk-indicator low" style="width: 30%;"></div>
+        </div>
+      </div>
+      <div class="risk-card">
+        <div class="risk-title">Medium Risk</div>
+        <p>Balanced growth and stability</p>
+        <p class="risk-funds">Funds: Balanced Advantage, Dividend Yield</p>
+        <div class="risk-bar">
+          <div class="risk-indicator medium" style="width: 60%;"></div>
+        </div>
+      </div>
+      <div class="risk-card">
+        <div class="risk-title">High Risk</div>
+        <p>For aggressive growth investors</p>
+        <p class="risk-funds">Funds: Equity Growth, International Growth</p>
+        <div class="risk-bar">
+          <div class="risk-indicator high" style="width: 90%;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="main-footer">
+  <div class="container">
+    <p>&copy; 2026 Mutual Funds Platform. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

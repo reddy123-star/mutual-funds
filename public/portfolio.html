@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Mutual Fund Investment Platform</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="funds.html">Explore Funds</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="login.html">Logout</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>My Portfolio</h2>
+  <p>Track your investments and monitor performance</p>
+
+  <div class="portfolio-summary">
+    <div class="summary-card">
+      <h3>Total Investment</h3>
+      <p class="amount">₹18,000</p>
+    </div>
+    <div class="summary-card">
+      <h3>Current Value</h3>
+      <p class="amount">₹20,500</p>
+    </div>
+    <div class="summary-card">
+      <h3>Total Gain</h3>
+      <p class="amount gain">₹2,500 (13.8%)</p>
+    </div>
+  </div>
+
+  <h3>Your Investments</h3>
+  <table class="portfolio-table">
+    <thead>
+      <tr>
+        <th>Fund Name</th>
+        <th>Investment Amount</th>
+        <th>Current Value</th>
+        <th>Gain/Loss</th>
+        <th>Returns %</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Equity Growth Fund</strong></td>
+        <td>₹5,000</td>
+        <td>₹5,750</td>
+        <td class="gain">₹750</td>
+        <td><span class="returns">15%</span></td>
+        <td><button onclick="redeemFund('Equity Growth Fund')" class="btn-small">Redeem</button></td>
+      </tr>
+      <tr>
+        <td><strong>Balanced Fund</strong></td>
+        <td>₹8,000</td>
+        <td>₹8,800</td>
+        <td class="gain">₹800</td>
+        <td><span class="returns">10%</span></td>
+        <td><button onclick="redeemFund('Balanced Fund')" class="btn-small">Redeem</button></td>
+      </tr>
+      <tr>
+        <td><strong>Dividend Fund</strong></td>
+        <td>₹5,000</td>
+        <td>₹5,950</td>
+        <td class="gain">₹950</td>
+        <td><span class="returns">19%</span></td>
+        <td><button onclick="redeemFund('Dividend Fund')" class="btn-small">Redeem</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="margin-top: 30px;">
+    <a href="funds.html" class="btn">Add More Funds</a>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2026 Mutual Fund Platform. All rights reserved.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

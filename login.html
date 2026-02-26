@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Mutual Funds Platform</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-page">
+
+<header class="main-header">
+  <div class="container">
+    <div class="logo">💰 MutualFunds</div>
+  </div>
+</header>
+
+<div class="login-container">
+  <div class="login-box">
+    <h2>Login to Your Account</h2>
+    <p class="login-subtitle">Select your role and login</p>
+    
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="role">Select Role:</label>
+        <select id="role" required>
+          <option value="">-- Choose Role --</option>
+          <option value="investor">Investor</option>
+          <option value="admin">Admin</option>
+          <option value="advisor">Financial Advisor</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter your username" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+      </div>
+
+      <button type="button" class="btn btn-primary btn-block" onclick="login()">Login</button>
+    </form>
+
+    <p class="login-footer">Don't have an account? <a href="index.html">Go back to home</a></p>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

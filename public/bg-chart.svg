@@ -1,0 +1,29 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="chartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="300" fill="url(#chartGrad)"/>
+  
+  <!-- Chart-like Pattern -->
+  <g stroke="#0b5cff" stroke-width="2" fill="none" opacity="0.15">
+    <polyline points="50,250 150,200 250,180 350,210 450,120 550,160 650,100 750,140 850,80 950,120 1050,90 1150,130"/>
+  </g>
+  
+  <!-- Area Fill -->
+  <path d="M 50,250 L 150,200 L 250,180 L 350,210 L 450,120 L 550,160 L 650,100 L 750,140 L 850,80 L 950,120 L 1050,90 L 1150,130 L 1150,300 L 50,300 Z" fill="#0b5cff" opacity="0.08"/>
+  
+  <!-- Vertical Grid -->
+  <g stroke="#0b5cff" stroke-width="1" opacity="0.1">
+    <line x1="150" y1="0" x2="150" y2="300" />
+    <line x1="300" y1="0" x2="300" y2="300" />
+    <line x1="450" y1="0" x2="450" y2="300" />
+    <line x1="600" y1="0" x2="600" y2="300" />
+    <line x1="750" y1="0" x2="750" y2="300" />
+    <line x1="900" y1="0" x2="900" y2="300" />
+    <line x1="1050" y1="0" x2="1050" y2="300" />
+  </g>
+</svg>

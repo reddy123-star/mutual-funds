@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel - Mutual Funds Platform</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="main-header">
+  <div class="container">
+    <div class="logo">💰 MutualFunds</div>
+    <nav class="main-nav">
+      <span class="user-name" id="userName">Admin</span>
+      <a href="index.html" class="btn-logout" onclick="logout()">Logout</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container admin-container">
+  <h2>Admin Dashboard</h2>
+  <p class="subtitle">Manage funds, users, and platform content</p>
+
+  <div class="admin-nav">
+    <button class="admin-tab active" onclick="showTab('funds')">Manage Funds</button>
+    <button class="admin-tab" onclick="showTab('users')">Manage Users</button>
+    <button class="admin-tab" onclick="showTab('reports')">Reports</button>
+    <button class="admin-tab" onclick="showTab('content')">Content</button>
+  </div>
+
+  <!-- Manage Funds Tab -->
+  <div id="funds-tab" class="admin-tab-content active">
+    <h3>Add New Mutual Fund</h3>
+    <form class="admin-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Fund Name:</label>
+          <input type="text" placeholder="e.g., Technology Growth Fund" required>
+        </div>
+        <div class="form-group">
+          <label>Category:</label>
+          <select required>
+            <option>Equity</option>
+            <option>Debt</option>
+            <option>Hybrid</option>
+            <option>Equity - Sectoral</option>
+            <option>Equity - International</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Risk Level:</label>
+          <select required>
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Expected Returns (%):</label>
+          <input type="number" placeholder="e.g., 12" step="0.1" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Expense Ratio (%):</label>
+          <input type="number" placeholder="e.g., 0.8" step="0.01" required>
+        </div>
+        <div class="form-group">
+          <label>AUM (₹ in Cr):</label>
+          <input type="number" placeholder="e.g., 500" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Description:</label>
+        <textarea placeholder="Fund description and details..." rows="4"></textarea>
+      </div>
+
+      <button type="button" class="btn btn-primary" onclick="alert('Fund added successfully!')">Add Fund</button>
+    </form>
+
+    <h3 style="margin-top: 40px;">Existing Funds</h3>
+    <div class="funds-management">
+      <table class="management-table">
+        <thead>
+          <tr>
+            <th>Fund Name</th>
+            <th>Category</th>
+            <th>Risk</th>
+            <th>Returns</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Equity Growth Fund</td>
+            <td>Equity</td>
+            <td><span class="badge high-risk">High</span></td>
+            <td>15%</td>
+            <td>
+              <button class="btn btn-small btn-info" onclick="alert('Edit feature coming soon!')">Edit</button>
+              <button class="btn btn-small btn-danger" onclick="alert('Fund deleted!')">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Balanced Advantage Fund</td>
+            <td>Hybrid</td>
+            <td><span class="badge medium-risk">Medium</span></td>
+            <td>10%</td>
+            <td>
+              <button class="btn btn-small btn-info" onclick="alert('Edit feature coming soon!')">Edit</button>
+              <button class="btn btn-small btn-danger" onclick="alert('Fund deleted!')">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Secure Income Fund</td>
+            <td>Debt</td>
+            <td><span class="badge low-risk">Low</span></td>
+            <td>5%</td>
+            <td>
+              <button class="btn btn-small btn-info" onclick="alert('Edit feature coming soon!')">Edit</button>
+              <button class="btn btn-small btn-danger" onclick="alert('Fund deleted!')">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Manage Users Tab -->
+  <div id="users-tab" class="admin-tab-content">
+    <h3>User Management</h3>
+    <table class="management-table">
+      <thead>
+        <tr>
+          <th>User ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>USR001</td>
+          <td>Rajesh Kumar</td>
+          <td>rajesh@example.com</td>
+          <td>Investor</td>
+          <td><span class="badge success">Active</span></td>
+          <td>
+            <button class="btn btn-small btn-info" onclick="alert('View user details')">View</button>
+            <button class="btn btn-small btn-danger" onclick="alert('User suspended!')">Suspend</button>
+          </td>
+        </tr>
+        <tr>
+          <td>USR002</td>
+          <td>Priya Singh</td>
+          <td>priya@example.com</td>
+          <td>Advisor</td>
+          <td><span class="badge success">Active</span></td>
+          <td>
+            <button class="btn btn-small btn-info" onclick="alert('View user details')">View</button>
+            <button class="btn btn-small btn-danger" onclick="alert('User suspended!')">Suspend</button>
+          </td>
+        </tr>
+        <tr>
+          <td>USR003</td>
+          <td>Amit Patel</td>
+          <td>amit@example.com</td>
+          <td>Investor</td>
+          <td><span class="badge warning">Inactive</span></td>
+          <td>
+            <button class="btn btn-small btn-info" onclick="alert('View user details')">View</button>
+            <button class="btn btn-small" onclick="alert('User reactivated!')">Activate</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Reports Tab -->
+  <div id="reports-tab" class="admin-tab-content">
+    <h3>Platform Reports</h3>
+    <div class="reports-grid">
+      <div class="report-card">
+        <h4>Total Users</h4>
+        <div class="report-value">2,345</div>
+        <div class="report-change">+125 this month</div>
+      </div>
+      <div class="report-card">
+        <h4>Active Investors</h4>
+        <div class="report-value">1,890</div>
+        <div class="report-change">+89 this month</div>
+      </div>
+      <div class="report-card">
+        <h4>Total Investment</h4>
+        <div class="report-value">₹45 Cr</div>
+        <div class="report-change">+₹5.2 Cr this month</div>
+      </div>
+      <div class="report-card">
+        <h4>Avg Portfolio Value</h4>
+        <div class="report-value">₹1.9 Lakh</div>
+        <div class="report-change">+3.2% growth</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 30px;">
+      <h4>Download Reports</h4>
+      <button class="btn btn-primary" onclick="alert('Report downloaded!')">Download Monthly Report</button>
+      <button class="btn btn-secondary" onclick="alert('Report downloaded!')">Download User Analytics</button>
+      <button class="btn btn-secondary" onclick="alert('Report downloaded!')">Download Fund Performance</button>
+    </div>
+  </div>
+
+  <!-- Content Tab -->
+  <div id="content-tab" class="admin-tab-content">
+    <h3>Manage Platform Content</h3>
+    <div class="content-form">
+      <div class="form-group">
+        <label>Page Title:</label>
+        <input type="text" placeholder="e.g., Home Page Content" value="Home Page">
+      </div>
+      <div class="form-group">
+        <label>Content:</label>
+        <textarea placeholder="Edit page content..." rows="6"></textarea>
+      </div>
+      <button class="btn btn-primary" onclick="alert('Content updated!')">Update Content</button>
+    </div>
+
+    <h4 style="margin-top: 30px;">Recent Updates</h4>
+    <ul class="content-list">
+      <li>Home page banner updated - 2 hours ago</li>
+      <li>New fund added to listing - 5 hours ago</li>
+      <li>Platform maintenance completed - 1 day ago</li>
+      <li>New advisor joined platform - 2 days ago</li>
+    </ul>
+  </div>
+</div>
+
+<footer class="main-footer">
+  <div class="container">
+    <p>&copy; 2026 Mutual Funds Platform. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

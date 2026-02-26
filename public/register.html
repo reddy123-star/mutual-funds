@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Mutual Fund Investment Platform</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+<div class="login-container">
+  <div class="login-box" style="max-width: 400px;">
+    <h2>Register Account</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="Username" required>
+
+      <label for="role">Select Role:</label>
+      <select id="role" required>
+        <option value="">-- Choose a Role --</option>
+        <option value="investor">Investor</option>
+        <option value="advisor">Financial Advisor</option>
+        <option value="analyst">Data Analyst</option>
+      </select>
+
+      <input type="password" placeholder="Password" required>
+      <input type="password" placeholder="Confirm Password" required>
+
+      <button type="button" onclick="register()" class="btn">Register</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2026 Mutual Fund Platform. All rights reserved.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

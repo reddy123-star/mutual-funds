@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mutual Funds - Investment Platform</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="main-header">
+  <div class="container">
+    <div class="logo">💰 MutualFunds</div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="login.html" class="btn-login">Login</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <h2>Available Mutual Funds</h2>
+  <p class="subtitle">Choose from our carefully curated mutual funds</p>
+
+  <div class="filter-section">
+    <h4>Filter by Risk Level:</h4>
+    <button class="filter-btn active" onclick="filterFunds('all')">All</button>
+    <button class="filter-btn" onclick="filterFunds('low')">Low Risk</button>
+    <button class="filter-btn" onclick="filterFunds('medium')">Medium Risk</button>
+    <button class="filter-btn" onclick="filterFunds('high')">High Risk</button>
+  </div>
+
+  <div class="funds-list" id="fundsList">
+    <!-- Funds will be populated by JavaScript -->
+  </div>
+</div>
+
+<footer class="main-footer">
+  <div class="container">
+    <p>&copy; 2026 Mutual Funds Platform. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script>
+  // Initialize funds on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    displayAllFunds();
+  });
+</script>
+</body>
+</html>

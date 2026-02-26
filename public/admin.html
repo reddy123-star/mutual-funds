@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Mutual Fund Investment Platform</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="admin.html">Admin Panel</a>
+    <a href="admin-users.html">Users</a>
+    <a href="login.html">Logout</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Admin Dashboard</h2>
+  <p>Manage platform, users, funds and content</p>
+
+  <div class="admin-grid">
+    <div class="admin-card">
+      <h3>📈 Add New Fund</h3>
+      <form>
+        <input type="text" placeholder="Fund Name" required>
+        <input type="text" placeholder="Risk Level (High/Medium/Low)" required>
+        <input type="number" placeholder="Expected Returns (%)" required>
+        <input type="number" placeholder="Minimum Investment (₹)" required>
+        <textarea placeholder="Fund Description"></textarea>
+        <button type="button" onclick="addFund()" class="btn">Add Fund</button>
+      </form>
+    </div>
+
+    <div class="admin-card">
+      <h3>👥 Manage Users</h3>
+      <p>View and manage all platform users</p>
+      <table class="user-table">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Role</th>
+            <th>Email</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>john_investor</td>
+            <td>Investor</td>
+            <td>john@example.com</td>
+            <td><button class="btn-small">Block</button></td>
+          </tr>
+          <tr>
+            <td>sarah_advisor</td>
+            <td>Advisor</td>
+            <td>sarah@example.com</td>
+            <td><button class="btn-small">Block</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="admin-card">
+      <h3>📊 Platform Statistics</h3>
+      <div class="stats">
+        <p><strong>Total Users:</strong> 45</p>
+        <p><strong>Total Funds:</strong> 12</p>
+        <p><strong>Active Investments:</strong> 87</p>
+        <p><strong>Total AUM:</strong> ₹5,45,000</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2026 Mutual Fund Platform. All rights reserved.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

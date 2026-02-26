@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Mutual Funds Platform</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="main-header">
+  <div class="container">
+    <div class="logo">💰 MutualFunds</div>
+    <nav class="main-nav">
+      <span class="user-name" id="userName">Investor</span>
+      <a href="index.html" class="btn-logout" onclick="logout()">Logout</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container dashboard-container">
+  <h2>Investor Dashboard</h2>
+  <p class="subtitle">Manage your investments and portfolio</p>
+
+  <div class="dashboard-grid">
+    <div class="dashboard-card">
+      <div class="card-icon">📊</div>
+      <h3>Explore Funds</h3>
+      <p>Browse and discover mutual funds that match your investment goals.</p>
+      <a href="funds.html" class="btn btn-primary">View Funds</a>
+    </div>
+
+    <div class="dashboard-card">
+      <div class="card-icon">⚖️</div>
+      <h3>Compare Funds</h3>
+      <p>Compare multiple funds side by side to analyze performance and risk.</p>
+      <a href="compare.html" class="btn btn-primary">Compare</a>
+    </div>
+
+    <div class="dashboard-card">
+      <div class="card-icon">💼</div>
+      <h3>My Portfolio</h3>
+      <p>View and manage your investment portfolio and holdings.</p>
+      <a href="portfolio.html" class="btn btn-primary">My Portfolio</a>
+    </div>
+
+    <div class="dashboard-card">
+      <div class="card-icon">⚠️</div>
+      <h3>Risk Analysis</h3>
+      <p>Understand the risk profile of your investments.</p>
+      <a href="compare.html" class="btn btn-primary">Analyze Risk</a>
+    </div>
+  </div>
+
+  <section class="portfolio-summary">
+    <h3>Portfolio Summary</h3>
+    <div class="summary-grid">
+      <div class="summary-item">
+        <div>Total Investment</div>
+        <div class="summary-value">₹50,000</div>
+      </div>
+      <div class="summary-item">
+        <div>Current Value</div>
+        <div class="summary-value">₹56,500</div>
+      </div>
+      <div class="summary-item">
+        <div>Returns</div>
+        <div class="summary-value positive">+₹6,500 (13%)</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="main-footer">
+  <div class="container">
+    <p>&copy; 2026 Mutual Funds Platform. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

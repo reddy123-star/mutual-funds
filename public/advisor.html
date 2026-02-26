@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Advisor Panel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Mutual Fund Investment Platform</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="advisor.html">Advisor Panel</a>
+    <a href="advisor-recommendations.html">My Recommendations</a>
+    <a href="login.html">Logout</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Financial Advisor Dashboard</h2>
+  <p>Provide expert advice and create educational content</p>
+
+  <div class="advisor-grid">
+    <div class="advisor-card">
+      <h3>📝 Create Recommendation</h3>
+      <form>
+        <select required>
+          <option value="">-- Select Client --</option>
+          <option value="investor1">John Investor</option>
+          <option value="investor2">Jane Smith</option>
+          <option value="investor3">Robert Lee</option>
+        </select>
+
+        <select required>
+          <option value="">-- Select Fund --</option>
+          <option value="equity">Equity Growth Fund</option>
+          <option value="balanced">Balanced Fund</option>
+          <option value="debt">Debt Fund</option>
+        </select>
+
+        <textarea placeholder="Write Investment Recommendation" required></textarea>
+        <button type="button" onclick="sendRecommendation()" class="btn">Send Recommendation</button>
+      </form>
+    </div>
+
+    <div class="advisor-card">
+      <h3>📚 Educational Content</h3>
+      <p>Create content to educate investors</p>
+      <textarea placeholder="Write an article about mutual funds"></textarea>
+      <button onclick="publishContent()" class="btn">Publish Article</button>
+    </div>
+
+    <div class="advisor-card">
+      <h3>👥 My Clients</h3>
+      <table class="client-table">
+        <thead>
+          <tr>
+            <th>Client Name</th>
+            <th>Investment Amount</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John Investor</td>
+            <td>₹15,000</td>
+            <td><span class="status-active">Active</span></td>
+            <td><button class="btn-small">View</button></td>
+          </tr>
+          <tr>
+            <td>Jane Smith</td>
+            <td>₹25,000</td>
+            <td><span class="status-active">Active</span></td>
+            <td><button class="btn-small">View</button></td>
+          </tr>
+          <tr>
+            <td>Robert Lee</td>
+            <td>₹10,000</td>
+            <td><span class="status-inactive">Inactive</span></td>
+            <td><button class="btn-small">View</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2026 Mutual Fund Platform. All rights reserved.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
